@@ -1,5 +1,5 @@
 var discord = require('discord.js');
-var logins = require('logins.js')
+//var logins = require('logins.js')
 var express = require('express')
 var app = express()
 var PORT = process.env.PORT || 3000
@@ -67,4 +67,4 @@ bot.on("voiceJoin", function(voice, user){
     }, 1500); //this set timeout doesn't work. idk why
 });
 
-bot.login(logins.LordKappa.email, logins.LordKappa.password);
+bot.login(process.env['lord_kappa_email'], process.env['lord_kappa_pw']);
