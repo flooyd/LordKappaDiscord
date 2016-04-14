@@ -53,7 +53,7 @@ bot.on("voiceJoin", function(voice, user){
     
     setTimeout (function(){
         bot.sendMessage('167794933720285184', message , {tts: true});
-    }, 1500);
+    }, 1500); //this set timeout doesn't work. idk why
 });
 
 bot.login(logins.LordKappa.email, logins.LordKappa.password);
