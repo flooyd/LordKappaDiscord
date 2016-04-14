@@ -1,5 +1,5 @@
 var discord = require('discord.js');
-var logins = require('./logins.js')
+var logins = require('logins.js')
 var express = require('express')
 var app = express()
 var PORT = process.env.PORT || 3000
