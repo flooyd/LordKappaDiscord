@@ -36,19 +36,14 @@ bot.on("messageUpdated", function(newMessage, oldMessage){
 bot.on("userTypingStarted", function (user, channel){
     var message;
     if(basedThing === true){
-        
-    
-    if (user.username === 'Grey Face (no space)'){
-        message = 'Get ready son. The most based god is typing a message!'
-    }
-    else message = 'What are you typing ' + user.username + '?';
-    setTimeout(function(){
-        bot.sendMessage('167794933720285184', message , {tts: true}, function(error, message){
-        
-    } );
-    }, 400);
-    
-    
+          
+        if (user.username === 'Grey Face (no space)'){
+            message = 'Get ready son. The most based god is typing a message!'
+        } else message = 'What are you typing ' + user.username + '?';
+        setTimeout (function(){
+        bot.sendMessage('167794933720285184', message , {tts: true});
+        }, 400);
+       
     basedThing = false;
     }
 })
@@ -57,17 +52,8 @@ bot.on("voiceJoin", function(voice, user){
     var message = user.username + " has joined voice chat. " +  " Hello " + user.username + ".";
     
     setTimeout (function(){
-        bot.sendMessage('167794933720285184', message , {tts: true}, function(error, message){
-        
-    });
+        bot.sendMessage('167794933720285184', message , {tts: true});
     }, 1500);
 });
-
-console.log(logins.LordKappa.email)
-
-
-
-
-
 
 bot.login(logins.LordKappa.email, logins.LordKappa.password);
