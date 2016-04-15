@@ -42,7 +42,8 @@ bot.on('message', function (message) {
 })
 
 bot.on('messageUpdated', function (newMessage, oldMessage) {
-  console.log(oldMessage)
+  bot.sendMessage('167794933720285184', oldMessage , {tts: true})
+  bot.sendMessage('167794933720285184', newMessage , {tts: true})
 })
 
 bot.on('userTypingStarted', function (user, channel) {
