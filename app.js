@@ -20,13 +20,13 @@ bot.on('message', function (message) {
     bot.sendMessage('167794933720285184', 'Yes?' , {tts: true})
   } else if (message.content === 'How are you doing bot?') {
     message = "I'm doing fine. Thank you for asking peasant."
-    bot.sendMessage('167794933720285184', message , {tts: true})
+    bot.sendMessage('167794933720285184', message , {tts: false})
   }
   else if (message.content === '!uptime') {
     message = 'I have been trolling this chat for ' + bot.uptime / 1000 + ' seconds.'
     bot.sendMessage('167794933720285184', message , {tts: true})
   } else if (message.content === 'test') {
-    bot.sendMessage('167794933720285184', 'Hello', {tts: true})
+    bot.sendMessage('167794933720285184', 'Hello test', {tts: false})
   } else if (message.content === '!themostbasedthing') {
     message = 'The most based thing has been enabled.'
     bot.sendMessage('167794933720285184', message , {tts: true})
@@ -41,9 +41,10 @@ bot.on('message', function (message) {
   }
 })
 
-bot.on('messageUpdated', function (newMessage, oldMessage) {
-  bot.sendMessage('167794933720285184', oldMessage , {tts: true})
-  bot.sendMessage('167794933720285184', newMessage , {tts: true})
+bot.on('messageUpdated', function (oldMessage, newMessage) {
+  console.log('MESSAGE WAS EDITED BY: ' + oldMessage.author + ' @ ' + new Date().toString())
+  console.log('Original Message: ' + oldMessage)
+  console.log('New Message: ' + newMessage)
 })
 
 bot.on('userTypingStarted', function (user, channel) {
@@ -64,7 +65,7 @@ bot.on('voiceJoin', function (voice, user) {
   var message = user.username + ' has joined voice chat. ' + ' Hello ' + user.username + '.'
 
   setTimeout(function () {
-    bot.sendMessage('167794933720285184', message , {tts: true})
+    bot.sendMessage('167794933720285184', message , {tts: false})
   }, 1500); // this set timeout doesn't work. idk why
 })
 
