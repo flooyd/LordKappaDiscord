@@ -17,7 +17,7 @@ var basedThing = false
 
 bot.on('message', function (message) {
   if (message.content.includes('Kappa')) {
-    bot.sendMessage('167794933720285184', 'Yes?' , {tts: true})
+    bot.sendMessage('167794933720285184', 'http://i.imgur.com/Fo2rf6S.png?1' , {tts: false})
   } else if (message.content === 'How are you doing bot?') {
     message = "I'm doing fine. Thank you for asking peasant."
     bot.sendMessage('167794933720285184', message , {tts: false})
