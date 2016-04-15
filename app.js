@@ -84,4 +84,5 @@ function getArmory (message) {
   }
 }
 
+//bot.login(logins.LordKappa.email, logins.LordKappa.password)
 bot.login(process.env['lord_kappa_email'], process.env['lord_kappa_pw'])
